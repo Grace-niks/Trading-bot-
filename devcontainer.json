@@ -1,0 +1,14 @@
+{
+  "name": "XRP Volume Bot",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "forwardPorts": [3000, 5173],
+  "postCreateCommand": "npm install -g pnpm && cd backend && pnpm install && cd ../frontend && pnpm install",
+  "customizations": {
+    "vscode": {
+      "settings": {},
+      "extensions": ["esbenp.prettier-vscode"]
+    }
+  }
+}
